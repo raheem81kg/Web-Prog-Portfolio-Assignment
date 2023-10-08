@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display+SC:wght@400;700&display=swap");
+/* font-family: 'Lato', sans-serif;
+font-family: 'Playfair Display SC', serif; */
+
+:root {
+    --lightergray-color: #f4f4f4;
+    --lightgray-color: #a7a7a7;
+    --gray-color: #4e4e4e;
+    --darkgray-color: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+}
+/* Define common styles for sections */
+.section {
+    padding: 50px 0;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center; */
+    max-width: clamp(320px, 85vw, 800px);
+    margin: auto;
+    position: relative;
+}
+
+.seperator-container {
+    max-width: clamp(320px, 85vw, 800px);
+    margin: auto;
+}
+/* Header and Navigation */
+header {
+    background-color: var(--lightergray-color);
+    padding: 30px 0;
+    font-size: 1rem;
+}
+nav {
+    margin: auto;
+    max-width: clamp(320px, 85vw, 800px);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+    color: var(--lightgray-color);
+}
+
+nav a:hover {
+    color: var(--gray-color);
+}
+
+/* Index Page */
+/* #index {
+    background-color: #f0f0f0;
+} */
+
+#index p {
+    font-size: 1em;
+    color: var(--gray-color);
+    line-height: 1.75em;
+}
+
+.index-content {
+    animation: fadeIn 1s ease;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 1.6em;
+}
+
+.index-content .mid {
+    display: flex;
+    gap: 45px;
+    align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Playfair Display SC", serif;
+}
+
+.index-content .text {
+    color: var(--darkgray-color);
+    font-size: 2rem;
+    line-height: 1.125;
+}
+
+.profile-pic {
+    filter: grayscale(100%);
+    max-width: 100%; /* Prevents the image from exceeding its original width */
+    max-height: 100%; /* Prevents the image from exceeding its original height */
+    width: auto; /* Allows the image to adjust its width while maintaining the aspect ratio */
+    height: auto; /* Allows the image to adjust its height while maintaining the aspect ratio */
+}
+
+.text .bottom-text {
+    font-size: 3rem;
+}
+
+.index-content img {
+    width: 81px;
+    height: 81px;
+    border-radius: 50%;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.index-content img:hover {
+    transform: scale(1.1);
+}
+
+.contact-button {
+    display: inline;
+    background-color: var(--darkgray-color);
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    width: 100px;
+}
+
+.contact-button:hover {
+    background-color: var(--lightgray-color);
+}
+
+/* Professional Page */
+.professional-content {
+    max-width: clamp(320px, 85vw, 800px);
+    animation: fadeIn 1s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.professional-content h2,
+.personality-content h2,
+.my-hero-container h2,
+.personality-container h2,
+.storyboard-container h2,
+.personality-test-container h2 {
+    font-size: 2.25rem;
+    line-height: 1.25;
+    color: var(--darkgray-color);
+}
+
+.professional-content p,
+li {
+    color: var(--gray-color);
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.professional-content h3 {
+    font-size: 1.8rem;
+    line-height: 1.25;
+    margin-bottom: 15px;
+    color: var(--darkgray-color);
+}
+
+/* REFERENCE PAGE */
+.reference-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.reference {
+    margin-bottom: 25px;
+}
+.authors {
+    font-weight: bold;
+}
+.title {
+    font-style: italic;
+    margin-left: 25px;
+}
+.source {
+    margin-left: 25px;
+    font-weight: normal;
+}
+
+/* StoryBoard Page */
+#storyboard h4 {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* Add styles for other sections similarly */
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .section {
+        padding: 30px;
+    }
+
+    .index-content img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
